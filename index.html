@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--Icon pour google-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+  <!--css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="style.css">
+
+  <!--js-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>227Voyages</title>
+
+  <script>
+    //Slider
+    document.addEventListener('DOMContentLoaded', function () {
+      var elem = document.querySelectorAll('.slider');
+      var instances = M.Slider.init(elem, {indicators:false});
+    });
+
+    //Sidenav
+    document.addEventListener('DOMContentLoaded', function () {
+      var elem = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elem, {});
+    });
+
+    //Autocomplete
+    document.addEventListener('DOMContentLoaded', function () {
+      var elem = document.querySelectorAll('.autocomplete');
+      var instances = M.Autocomplete.init(elem, {
+        data: {
+          "Niamey": null,
+          "Maradi": null,
+          "Zinder": null,
+          "Taoua": null,
+          "Dosso": null,
+          "Diffa": null,
+          "Arlit": null,
+          "Tillavery": null,
+          "Gaya": null,
+          "Madaroufa": null,
+          "Gazaoua": null,
+        }
+      });
+    });
+
+    //Materialbox
+    document.addEventListener('DOMContentLoaded', function () {
+      var elem = document.querySelectorAll('.materialboxed');
+      var instances = M.Materialbox.init(elem, {});
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- barre de navigation -->
+  <div class="navbar-fixed">
+    <nav class="teal">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">227voyages</a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Popular Places</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Search</a></li>
+    <li><a href="#">Popular Places</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <!-- glissière -->
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="image4.jpg" alt="">
+        <div class="caption center-align">
+          <h3>Take Your Dream Vacation</h3>
+          <h6 class="ligth grey-text text-lighten-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+            non illo earum cumque id est!</h6>
+          <a href="#" class="waves-effect waves-teal btn-large ">LEARN MORE</a>
+        </div>
+      </li>
+
+      <li>
+        <img src="image5.jpg" alt="">
+        <div class="caption left-align">
+          <h3>We Worrk With All Budgets</h3>
+          <h6 class="ligth grey-text text-lighten-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+            non illo earum cumque id est!</h6>
+          <a href="#" class="waves-effect waves-teal btn-large ">LEARN MORE</a>
+        </div>
+      </li>
+      <li>
+        <img src="image3.jpg" alt="">
+        <div class="caption right-align">
+          <h3>Group & Individual Getaways</h3>
+          <h6 class="ligth grey-text text-lighten-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+            non illo earum cumque id est!</h6>
+          <a href="#" class="waves-effect waves-teal btn-large ">LEARN MORE</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- search-destination -->
+  <div id="search" class="search teal lighten-1 white-text center scrolllspy">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" style="padding-top: 15px; padding-bottom: 15px;">
+          <h4 class="center-align white-text">Search Destinations</h4>
+          <div class="input-field">
+            <input type="text" class="white grey-text autocomplete" id="autocomplete-input"
+              placeholder="Niamey, Maradi, Zinder,etc">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- icon avec son contenu -->
+  <div class="icons grey lighten-4 center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">room</i>
+            <h5>Pick Where</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">store</i>
+            <h5>Travel Shop</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">airplanemode_active</i>
+            <h5>Fly Cheap</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- image avec son contenu -->
+  <div id="contenu" class="contenu scrollspy">
+    <div class="container">
+      <div class="row">
+        <h5 class="center"><span class="teal-text">Popular</span> Places</h5>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="image4.jpg" alt="#">
+              <span class="card-title">Pillule, Niamey</span>
+            </div>
+            <div class="card-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              veniam quasi atque similique amet aut, esse veritatis, ratione dolore.
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="image5.jpg" alt="#">
+              <span class="card-title">Reserve Kouray</span>
+            </div>
+            <div class="card-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              veniam quasi atque similique amet aut, esse veritatis, ratione dolore.
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="image3.jpg" alt="#">
+              <span class="card-title">Ingall Agadez</span>
+            </div>
+            <div class="card-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              veniam quasi atque similique amet aut, esse veritatis, ratione dolore.
+            </div>
+          </div>
+        </div>
+        <div class="center" style="padding-top: 20px; padding-bottom: 20px;">
+          <button class="btn black"><i class="material-icons">send</i> CONTACT FOR BOOKING</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- icon-navigator -->
+  <div class="navigator-follow teal darken-2 white-text">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center" style="padding-top: 20px; padding-bottom: 20px;">
+          <h5>Follow 227voyages</h5>
+          <p>Follow us on social for media special offers</p>
+          <a href="#" class="white-text">
+            <i class="fab fa-facebook fa-4x"></i>
+          </a>&nbsp;&nbsp;
+
+          <a href="#" class="white-text">
+            <i class="fab fa-twitter fa-4x"></i>
+          </a>&nbsp;&nbsp;
+
+          <a href="#" class="white-text">
+            <i class="fab fa-linkedin fa-4x"></i>
+          </a>&nbsp;&nbsp;
+
+          <a href="#" class="white-text">
+            <i class="fab fa-google-plus fa-4x"></i>
+          </a>&nbsp;&nbsp;
+
+          <a href="#" class="white-text">
+            <i class="fab fa-pinterest fa-4x"></i>
+          </a>&nbsp;&nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- gallery -->
+  <div class="gallery scrolllspy">
+    <div class="container">
+      <div class="row">
+        <h5 class="center"> <span class="teal-text">Photo</span> Gallery</h5>
+        <div class="col s12 m3">
+          <img src="imageD.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageD.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageD.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageD.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m3">
+          <img src="imageC.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageC.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageC.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageC.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m3">
+          <img src="imageB.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageB.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageB.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+        <div class="col s12 m3">
+          <img src="imageB.jpg" alt="#" class="materialboxed responsive-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- formulaire -->
+  <div id="formulaire" class="formulaire scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card-penel teal white-text center" style="padding-top: 6px; padding-bottom: 6px; margin-top: 6px; margin-bottom: 6px;">
+            <i class="material-icons medium">email</i>
+            <h5>Contact Us For Booking</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Eius quidem officia dolor ducimus totam.</p>
+          </div>
+          <ul class="collection with-header">
+            <li class="collection-header">
+              <h5>Location</h5>
+            </li>
+            <li class="collection-item">227voyages Agency</li>
+            <li class="collection-item">555 Beach rd, Suite 33</li>
+            <li class="collection-item">Niamey,Ne, 447055</li>
+          </ul>
+        </div>
+        <div class="col s12 m6">
+          <div class="card-panel grey lighten-3">
+            <h6>Please fill out this form</h6>
+            <div class="input-field">
+              <input type="text" id="Name" class="validate">
+              <label for="Name">Name</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="Email" class="validate">
+              <label for="Email">Email</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="Phone" class="validate">
+              <label for="Phone">Phone</label>
+            </div>
+            <div class="input-field">
+              <textarea type="text" class="materialize-textarea" id="textarea"></textarea>
+              <label for="textarea">Textarea</label>
+            </div>
+            <input type="submit" value="submit" class="btn">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="teal darken-2 white-text center">
+    <p style="padding-top: 30px; padding-bottom: 30px;">227voyages © 2020</p>
+  </footer>
+</body>
+
+</html>
